@@ -1,0 +1,164 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding: 100px 0;
+    background: #f0f0f0; /* Daha soft bir arka plan rengi */
+}
+
+.section_title {
+    margin-top: 30px;
+}
+
+.section_title h2 {
+    position: relative;
+    text-align: center;
+    color: #333;
+    font-size: 30px;
+    transition: all .5s ease-in-out;
+}
+
+.section_title h2:hover {
+    background-color: #24caac;
+}
+
+/* HEADER */
+header {
+    background: rgba(40, 133, 156, 0.85);
+    border-bottom: 1px solid black;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Headera hafif bir gölge ekleyelim */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    padding: 15px 0;
+}
+
+.logo h2 a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.logo h2 a span.initials {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 15px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+.nav_links {
+    display: flex;
+}
+
+.nav_links li a {
+    margin-left: 15px;
+    color: white;
+    padding: 8px 20px; /* Daha geniş padding ile buton görünümü verelim */
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+    background: rgba(255, 255, 255, 0.1); /* Hafif şeffaf arka plan */
+}
+
+.nav_links li a:hover {
+    background: rgba(255, 255, 255, 0.3); /* Hover efektinde şeffaflık ve ton farkı ekledik */
+}
+
+/* HOMEPAGE */
+.inner_homepage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+    color: #333;
+}
+
+.child_homepage {
+    flex-basis: 40%;
+}
+
+.child_homepage h1 {
+    font-size: 50px;
+    color: #5A78D1;
+    line-height: 1.2;
+}
+
+.child_homepage_span {
+    color: #c275da;
+}
+
+.child_homepage p {
+    font-size: 45px;
+    color: #5A78D1;
+    margin-bottom: 12px;
+}
+
+.btn {
+    background: #c275da;
+    padding: 12px 24px;
+    border-radius: 20px;
+    color: white;
+    border: 1px solid #c275da;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #b364c9; /* Hover durumunda daha koyu bir mor renk */
+    color: white;
+    border-color: #b364c9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .inner_homepage {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .child_homepage {
+        flex-basis: 100%;
+    }
+
+    .child_homepage img {
+        margin-top: 20px;
+    }
+
+    .nav_links {
+        flex-direction: column;
+    }
+
+    .nav_links li a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
